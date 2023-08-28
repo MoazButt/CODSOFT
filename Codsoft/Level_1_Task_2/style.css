@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;  
+}
+
+ section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url(images/background_img.jpg);
+    background-size: cover;
+    background-position: center;
+ }
+
+ header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 15px 100px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+ }
+
+ header h2 {
+    position: relative;
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight:800;
+
+ }
+
+ header .options a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding:2px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+
+ }
+
+ header .options a:not(:last-child){
+    margin-right: 30px;
+ }
+
+ header .options a:hover {
+    background:white;
+    color: black;
+ }
+
+
+ .content {
+    max-width: 650px;
+    margin: 60px 100px;
+    margin-top: 100px;
+    display: flex;
+    align-self:last baseline;
+ }
+
+ .content h1{
+    color: white;
+    font-size: 60px ;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+ }
+
+.info p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color:white;
+ }
+
+ .card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:left;
+    margin-bottom: 15px;
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    max-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.aspect-ratio {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.card-img-top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card .card-body {
+
+    color: white; /* Set the font color to white */
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+
+}
+
+.card-title {
+    background-color: black;
+    color:white;
+}
+
+.services {
+    text-align: left; 
+    margin: 40px 0;
+    margin-top: 0px; 
+}
+
+.services-heading {
+    font-size: 28px; 
+    font-weight: 600;
+    color: white; 
+    margin: 20px; 
+    text-transform: uppercase;
+}
+
+.contact-us {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-us h2 {
+    margin-top: 0;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 10px;
+    color: white;
+}
+
+.contact-info svg {
+    color: white;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    header .options {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content {
+        margin: 30px 20px;
+    }
+
+    .info h1 {
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .info p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .services {
+        margin-top: 20px; 
+    }
+
+    .services-heading {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .services {
+        margin-top: -100px; 
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .services {
+        margin-top: -180px; 
+    }
+}
